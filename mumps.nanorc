@@ -5,8 +5,6 @@ tabgives ". "
 comment " ;"
 
 
-## Keywords
-
 # Variable keywords
 color brightblue "\<(K|KILL|kill|L|LOCK|lock|M|MERGE|merge|S|SET|set)\>\s"
 
@@ -21,8 +19,6 @@ color brightyellow "\<(B|BREAK|break|G|GOTO|goto|H|HALT|halt|HANG|hang|J|JOB|job
 color normal "\<(\w)\>\S"
 
 
-## Special
-
 # Special variables
 color green "(\$)(\w*)"
 
@@ -32,8 +28,6 @@ color brightgreen "(\$|\^)(\$)(\w*)"
 # Functions
 color blue "(\$)(\w*)\("
 
-
-## Operators
 
 # Match patterns
 color magenta "(\?)([123456789\.EAULNPC\(\)\,])*"
@@ -46,16 +40,12 @@ color brightmagenta "(\^)?(\$)+"
 color brightred "(!|_|#|\?)"
 
 
-## Raw data
-
 # Numbers
 color cyan "([0-9])*(\.)?([0-9])*"
 
 # Strings
 color red ""([^"]|\\")*"|#[[:blank:]]*include[[:blank:]]*<[^>]+>"
 
-
-## Other
 
 # Dotted blocks
 color brightmagenta "^(\. )*"
