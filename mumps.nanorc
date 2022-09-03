@@ -1,0 +1,67 @@
+## Syntax highlighting for Mumps
+
+syntax mumps "\.mps$"
+tabgives ". "
+comment " ;"
+
+
+## Keywords
+
+# Variable keywords
+color brightblue "\<(K|KILL|kill|L|LOCK|lock|M|MERGE|merge|S|SET|set)\>\s"
+
+# IO keywords
+color brightblue "\<(C|CLOSE|close|O|OPEN|open|R|READ|read|U|USE|use|V|VIEW|view|W|WRITE|write)\>"
+
+# Flow control
+color brightyellow "\<(D|DO|do|E|ELSE|else|F|FOR|for|I|IF|if|N|NEW|new|X|XECUTE|xecute)\>"
+color brightyellow "\<(B|BREAK|break|G|GOTO|goto|H|HALT|halt|HANG|hang|J|JOB|job|Q|QUIT|quit)\>"
+
+# Non keywords
+color normal "\<(\w)\>\S"
+
+
+## Special
+
+# Special variables
+color green "(\$)(\w*)"
+
+# Tags
+color brightgreen "(\$|\^)(\$)(\w*)"
+
+# Functions
+color blue "(\$)(\w*)\("
+
+
+## Operators
+
+# Match patterns
+color magenta "(\?)([123456789\.EAULNPC\(\)\,])*"
+
+# Punctuation
+color normal "[[:punct:]]"
+
+# Special operators
+color brightmagenta "(\^)?(\$)+"
+color brightred "(!|_|#|\?)"
+
+
+## Raw data
+
+# Numbers
+color cyan "([0-9])*(\.)?([0-9])*"
+
+# Strings
+color red ""([^"]|\\")*"|#[[:blank:]]*include[[:blank:]]*<[^>]+>"
+
+
+## Other
+
+# Dotted blocks
+color brightmagenta "^(\. )*"
+
+# Comments
+color bold,gray ";.*"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
